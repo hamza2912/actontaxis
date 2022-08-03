@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "dptransport-portal",
+    "staging": "dptransport-portal"
+  },
+  "targets": {}
+}

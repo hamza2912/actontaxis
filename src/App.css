@@ -1,0 +1,367 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+
+.green {
+  color: #85c226;
+}
+
+.bg-blue {
+  background-color: #1e4065;
+  box-shadow: 30%;
+}
+
+.px-80 {
+  padding-right: 8rem;
+}
+
+.mt-30 {
+  margin-top: 7rem;
+}
+
+.h-green {
+  transition: 0.5s;
+}
+
+.h-green:hover {
+  color: #85c226;
+}
+
+.border-blue {
+  border-color: #1e4065;
+}
+
+.h-border-b-white:hover {
+  border-bottom-color: white;
+}
+
+li label {
+  display: none;
+}
+
+.bg-1 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.654), rgba(15, 10, 10, 0.419)), url(background-images/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-green {
+  background-color: #85c226;
+  transition: 0.5s all ease;
+}
+
+.pr-22r {
+  padding-right: 6rem;
+}
+
+.opacity-1 {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.about-us {
+  background-color: #f8f8f8;
+}
+
+.h-bg-green {
+  transition: 0.6s all ease;
+}
+
+.h-bg-green:hover {
+  /* background-color: #85c226; */
+  background-color: #fbbf24;
+  box-shadow: 5px 5px 5px 5px;
+  /* border-color: #5e8e10; */
+  border-color: #fbbf24;
+}
+
+.bg-img {
+  background-image: url(background-images/airport_transfer.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.opacity-2 {
+  background: #222;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(34, 34, 34);
+}
+
+.b-green-op {
+  width: 215px;
+  height: 215px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 12px solid rgba(133, 194, 38, .5);
+  box-shadow: 0 0 10px 22px #85c226 inset;
+}
+
+.boxContent1 {
+  background-position: top 25px center;
+  background-repeat: no-repeat;
+  background-size: 64px;
+}
+
+.boxContent2 {
+  background-position: top 25px center;
+  background-repeat: no-repeat;
+  background-size: 64px;
+}
+
+.boxContent3 {
+  background-position: top 25px center;
+  background-repeat: no-repeat;
+  background-size: 64px;
+}
+
+.boxContent4 {
+  background-position: top 25px center;
+  background-repeat: no-repeat;
+  background-size: 64px;
+}
+
+.boxContent5 {
+  background-position: top 25px center;
+  background-repeat: no-repeat;
+  background-size: 64px;
+}
+
+.boxContent {
+  background-color: #FFF;
+  width: 160px;
+  height: 160px;
+  margin: 16px auto 0;
+  border-radius: 50%;
+  text-align: center;
+  padding: 105px 8px 8px;
+}
+
+/* .boxContent1 {
+  background-image: url(background-images/airport1.png);
+}
+
+.boxContent2 {
+  background-image: url(background-images/airport2.png);
+}
+
+.boxContent3 {
+  background-image: url(background-images/airport3.png);
+}
+
+.boxContent4 {
+  background-image: url(background-images/airport4.png);
+}
+
+.boxContent5 {
+  background-image: url(background-images/airport5.png);
+} */
+
+.h-text-green:hover {
+  /* color: #85c226; */
+  color: #374151;
+  text-decoration: underline #85c226;
+}
+
+.bg-img-1 {
+  background-image: url(background-images/railway_transfer.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.opacity-3 {
+  /* background-color: rgba(133, 194, 38, .5); */
+  background-color: rgba(251, 191, 36, .5);
+  
+}
+
+.station {
+  border: 1px solid #85c226;
+}
+
+.h-underline:hover {
+  text-decoration: underline black;
+}
+
+.rbox1 {
+  background-color: #85c226;
+  width: 244px;
+  border: 56px solid #85c226;
+  transition: 1s;
+}
+
+.rbox2 {
+  background-color: white;
+  width: 261px;
+  border: 4px solid white;
+}
+
+.rbox3 {
+  background-color: #85c226;
+  width: 275px;
+  border: 8px solid #85c226;
+  transition: 1s;
+}
+
+.rboxes {
+  width: 275px;
+  position: absolute;
+  left: 258px;
+  bottom: -25px;
+  transform: rotate(135deg);
+}
+
+.boxes {
+  position: relative;
+  overflow: hidden !important;
+}
+
+.cars {
+  transition: transform 1s;
+}
+
+#h-a {
+  transition: 0.5s;
+}
+
+.active:hover #h-a {
+  color: #85c226;
+}
+
+.active:hover .cars {
+  transform: scale(1.25);
+}
+
+.active:hover .rbox1 {
+  background-color: #222;
+  border-color: #222;
+}
+
+.active:hover .rbox3 {
+  background-color: #222;
+  border-color: #222;
+}
+
+.bg-dark {
+  background-color: #222;
+}
+
+.pl-50 {
+  padding-left: 22rem;
+}
+
+.t-services {
+  list-style-type: disc;
+}
+
+.form-control-2 {
+  display: block;
+  width: 100%;
+  height: calc(1.5em em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-bottom: 1px solid #ced4da;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #ccc;
+  padding: 12px;
+  resize: vertical;
+  overflow: auto;
+}
+
+.send {
+  background: #84c341;
+  border: 1px solid #84c341;
+  border-radius: 2rem;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+.send:hover {
+  color: #84c341;
+  background-color: #FFF;
+  border-color: #84c341;
+}
+
+.fade-in{
+  animation: FadeIn 0.2s linear;
+}
+.fade-in-slow{
+  animation: FadeIn 0.5s linear;
+}
+
+.slide-down{
+  animation: SlideDown 0.2s linear;
+}
+
+.slide-up{
+  animation: SlideUp 0.2s linear;
+}
+
+@media screen and (max-width:990px) {
+
+  .pr-22r {
+      padding-right: 0rem;
+  }
+
+  .w-r {
+      width: 74%;
+  }
+
+  .b-green-op {
+    width: 150px;
+    height: 150px;
+  }
+
+  .boxContent {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes SlideDown {
+  0% {
+    height: 0;
+  }
+  100% {
+    opacity: 100vh;
+  }
+}
+
+@keyframes SlideUp {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+  }
+}
