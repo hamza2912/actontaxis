@@ -7,7 +7,7 @@ function Car_slider({title, src, desc}) {
     return (
 
       <div class="item w-full h-auto active">
-            <div class="w-full h-auto lg:p-24 py-10">
+            <div class="w-full h-auto lg:p-12 py-10">
                 <div class="w-full h-auto boxes">
                     <img class="cars" src={src} alt="MVP Cars in Ealing" />
                     <div class="h-auto rboxes">

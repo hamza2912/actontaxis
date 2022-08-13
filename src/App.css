@@ -5,9 +5,14 @@
   font-family: 'Mulish', sans-serif;
 }
 
+html, body{
+  scroll-behavior: smooth;
+}
+
 
 .green {
-  color: #85c226;
+  /* color: #85c226; */
+  color: #fbbf24;
 }
 
 .bg-blue {
@@ -44,9 +49,10 @@ li label {
 }
 
 .bg-1 {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.654), rgba(15, 10, 10, 0.419)), url(background-images/home.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.654), rgba(15, 10, 10, 0.419)), url(background-images/home2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
 }
 
 .bg-green {
@@ -64,7 +70,7 @@ li label {
 
 .about-us {
   background-color: #f8f8f8;
-}
+}slide
 
 .h-bg-green {
   transition: 0.6s all ease;
@@ -82,7 +88,8 @@ li label {
   background-image: url(background-images/airport_transfer.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
+  /* background-attachment: fixed; */
 }
 
 .opacity-2 {
@@ -267,7 +274,7 @@ li label {
 .form-control-2 {
   display: block;
   width: 100%;
-  height: calc(1.5em em + 0.75rem + 2px);
+  height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -289,8 +296,8 @@ textarea {
 }
 
 .send {
-  background: #84c341;
-  border: 1px solid #84c341;
+  background: #fbbf24;
+  border: 1px solid #fbbf24;
   border-radius: 2rem;
   color: #fff;
   padding: 10px 30px;
@@ -298,9 +305,9 @@ textarea {
 }
 
 .send:hover {
-  color: #84c341;
+  color: #fbbf24;
   background-color: #FFF;
-  border-color: #84c341;
+  border-color: #fbbf24;
 }
 
 .fade-in{
@@ -312,6 +319,10 @@ textarea {
 
 .slide-down{
   animation: SlideDown 0.2s linear;
+}
+
+.slide-down-fast{
+  animation: SlideDownFast 0.2s linear;
 }
 
 .slide-up{
@@ -353,7 +364,18 @@ textarea {
     height: 0;
   }
   100% {
-    opacity: 100vh;
+    height: 100vh;
+  }
+}
+
+@keyframes SlideDownFast {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: auto;
   }
 }
 
@@ -362,6 +384,6 @@ textarea {
     height: 100vh;
   }
   100% {
-    opacity: 0;
+    height: 0;
   }
 }
