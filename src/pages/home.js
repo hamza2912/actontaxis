@@ -241,11 +241,11 @@ function Home() {
                     </div>
                     <div class="w-full h-auto lg:p-16 py-10 flex justify-center grid lg:grid-cols-5 grid-cols-2 lg:gap-8 gap-5 place-items-center">
 
-                        <Airport_widget src="images/icons/airport1.png" title="Healthrow" />
-                        <Airport_widget src="images/icons/airport2.png" title="Gatwick" />
-                        <Airport_widget src="images/icons/airport3.png" title="Luton" />
-                        <Airport_widget src="images/icons/airport4.png" title="Stansted" />
-                        <Airport_widget src="images/icons/airport5.png" title="London City" />
+                        <Airport_widget src="images/icons/airport1.png" url='/heathrow' title="Healthrow" />
+                        <Airport_widget src="images/icons/airport2.png" url='/gatwick' title="Gatwick" />
+                        <Airport_widget src="images/icons/airport3.png" url='/luton' title="Luton" />
+                        <Airport_widget src="images/icons/airport4.png" url='/stansted' title="Stansted" />
+                        <Airport_widget src="images/icons/airport5.png" url='/london' title="London City" />
                         
                     </div>
                 </div>
@@ -289,7 +289,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="">Waterloo</a></h2>
+                                    <h2><a href="/waterloo">Waterloo</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Use our taxi to get to Waterloo Station.</p>
                             </div>
@@ -302,7 +302,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="">The King's Cross</a></h2>
+                                    <h2><a href="/kingcross">The King's Cross</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Choose us to make your King's Cross station transfer as easy as possible.</p>
                             </div>
@@ -315,7 +315,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="">London Bridge</a></h2>
+                                    <h2><a href="/bridge">London Bridge</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Our cabs can take you to London Bridge station for a reasonable price.</p>
                             </div>
@@ -328,7 +328,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="">Euston</a></h2>
+                                    <h2><a href="/euston">Euston</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Contact us at whatever time of day or night for your Euston transfer.</p>
                             </div>
@@ -341,7 +341,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg font-bold h-underline">
-                                    <h2><a href="">Paddington</a></h2>
+                                    <h2><a href="/paddington">Paddington</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Make one call to book your taxi for the Paddington station transfer.</p>
                             </div>
@@ -354,7 +354,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="">The Charing Cross</a></h2>
+                                    <h2><a href="/charingcross">The Charing Cross</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">We make your journey to Charing Cross as pleasant and convenient as possible.</p>
                             </div>
@@ -367,7 +367,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="">Victoria</a></h2>
+                                    <h2><a href="/victoria">Victoria</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Make your tedious travel from Acton to Victoria enjoyable.
 </p>

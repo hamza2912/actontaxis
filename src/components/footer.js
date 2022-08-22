@@ -23,15 +23,15 @@ function Footer() {
                 <div class="w-1/2 h-auto flex grid-cols-2 lg:gap-8 gap-12 mt-10 lg:mt-0">
                     <div class="w-full h-auto flex flex-col">
                         <h2 class="text-2xl text-white font-bold mb-4">Services</h2>
-                        <a class="mt-4 text-gray-600 h-green" href=""> Acton Cabs</a>
-                        <a class="mt-4 text-gray-600 h-green" href="">Acton Minicabs</a>
-                        <a class="mt-4 text-gray-600 h-green" href="">Acton Cars</a>
+                        <a class="mt-4 text-gray-600 h-green" href="/cabs"> Acton Cabs</a>
+                        <a class="mt-4 text-gray-600 h-green" href="/minicabs">Acton Minicabs</a>
+                        <a class="mt-4 text-gray-600 h-green" href="/cars">Acton Cars</a>
                     </div>
                     <div class="w-full h-auto flex flex-col">
                         <h2 class="text-2xl text-white font-bold mb-4">Information</h2>
-                        <a class="mt-4 text-gray-600 h-green" href="">About Us</a>
-                        <a class="mt-4 text-gray-600 h-green" href="">Contact Us</a>
-                        <a class="mt-4 text-gray-600 h-green" href="">Privacy Policy</a>
+                        <a class="mt-4 text-gray-600 h-green" href="/about">About Us</a>
+                        <a class="mt-4 text-gray-600 h-green" href="/contact">Contact Us</a>
+                        <a class="mt-4 text-gray-600 h-green" href="/services">Services</a>
                     </div>
                 </div>
             </div>
