@@ -14,16 +14,16 @@ function London() {
         <Header />
      
           <section>
-            <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">LONDON CITY</h1>
+            <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">ACTON TO LONDON CITY</h1>
             <div class="w-full h-auto flex lg:flex-row flex-col-reverse lg:px-20 px-6 py-16">
                 <div class="lg:w-2/3 w-full h-auto lg:px-6 text-lg mt-6 lg:mt-0">
-                    <h1 className="font-bold pb-4 text-black text-xl">Minicabs from Acton to Paddington</h1>
-                    <p>Look no further for an Acton to Paddington minicab because our minicab business is available 24 hours a day, 7 days a week. We supply you with both the greatest minicabs to ensure that you can get to your destination without any problem. Our automobile fleet includes one of the greatest minicabs available for all of your needs.
-                    Our minicabs are great in terms of quality. Vehicles are secure and have everything you need, including air conditioning and comfortable seats, to keep you comfortable throughout the voyage. Our crew guarantees that only high-quality minicabs are recruited into our force, ensuring that clients always have a once-in-a-lifetime experience.
+                    <p>If you have an airport transfer coming up, it’s normal to feel anxious since it’s something unfamiliar to you.
                     </p>
-                    <h1 className="font-bold mt-8 pb-4 text-black text-xl">Minicab Fares are Reasonably Priced</h1>
-                    <p>Our mission is to become Acton's preferred minicab service, regardless of their budget. However, Acton Taxis is the firm that gives its customers the cheapest rate minicabs. But it doesn't imply we're sacrificing service quality.
-                    Balance and accountability are important aspects of our operations since we desire to satisfy our customers at any cost. As a result, we encourage input from our customers. Their input enables us to upgrade our offerings and advance them. You are guaranteed complete satisfaction when you work with us.
+                    <p>However, there’s no need for you to worry since we are a taxi company available for you 24/7 and provide exceptional airport transfers Acton to London City.
+                    </p>
+                    <p>Our cars are the finest and most luxurious. We have executive cars, MPVs, saloon cars and many more options available through which you can travel without worrying about the timings. Thus the only thing that is going to be on your mind is having fun while travelling in an excellent car while it chauffeurs you to your destination.
+                    </p>
+                    <p>Order a taxi Acton to London City now!
                     </p>
                   
                 </div>
