@@ -12,6 +12,9 @@ function Train() {
         <>
     
         <Header />
+
+        <Book />
+
      
           <section>
             <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">TRAIN STATIONS</h1>
@@ -48,7 +51,6 @@ function Train() {
                 </div>
             </div>
     
-            <Book />
             
         </section>
     

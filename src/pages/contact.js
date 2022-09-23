@@ -12,6 +12,9 @@ function Contact() {
     <>
 
     <Header />
+
+    <Book />
+
  
       <section>
         <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">Contact Us</h1>
@@ -47,7 +50,6 @@ function Contact() {
         </div>
     </main>
 
-    <Book />
 
        
     </section>

@@ -12,6 +12,9 @@ function Victoria() {
         <>
     
         <Header />
+
+        <Book />
+
      
           <section>
             <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">ACTON TO VICTORIA</h1>
@@ -27,7 +30,6 @@ function Victoria() {
                 </div>
             </div>
     
-            <Book />
             
         </section>
     

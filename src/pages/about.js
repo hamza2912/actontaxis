@@ -12,6 +12,8 @@ function About() {
     <>
 
     <Header />
+
+    <Book />
  
       <section>
         <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">About Us</h1>
@@ -33,7 +35,6 @@ function About() {
             </div>
         </div>
 
-        <Book />
         
     </section>
 

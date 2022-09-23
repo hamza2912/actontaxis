@@ -9,6 +9,10 @@ html, body{
   scroll-behavior: smooth;
 }
 
+a{
+  cursor: pointer;
+}
+
 
 .green {
   /* color: #85c226; */

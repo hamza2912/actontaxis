@@ -8,6 +8,8 @@ function Header({page}) {
     const [showNav, setshowNav] = React.useState(false);
     const [showdropdown, setshowdropdown] = React.useState(false);
 
+    let history = useHistory();
+
     return (
 
     <header class="w-full h-auto">
@@ -25,28 +27,28 @@ function Header({page}) {
                 <div class="w-3/5">
                     <div class="w-full hidden lg:flex flex-row justify-between font-semibold text-white">
                         <div class="h-green">
-                            <a href="/about">ABOUT</a>
+                            <a onClick={()=>history.push("/about")}>ABOUT</a>
                         </div>
                         <div class="h-green">
-                            <a href="/services">SERVICES</a>
+                            <a onClick={()=>history.push("/services")}>SERVICES</a>
                         </div>
                         <div class="relative cursor-pointer">
-                            <p onClick={()=>setshowdropdown(!showdropdown)} className="h-green z-10">CARS FLEET</p>
+                            <p onClick={()=>setshowdropdown(!showdropdown)} className="h-green z-10">CARRIER</p>
                             {showdropdown ? <div class='absolute w-24 flex flex-col pt-4 px-2 pb-4 top-5 left-0 shadow-lg text-sm slide-down-fast'>
-                                <a className="h-green" href="/cars">CARS</a>
-                                <a className="h-green" href="/cabs">CABS</a>
-                                <a className="h-green" href="/mini_cabs">MINI CABS</a>
+                                <a className="h-green" onClick={()=>history.push("/cars")}>CARS</a>
+                                <a className="h-green" onClick={()=>history.push("/cabs")}>CABS</a>
+                                <a className="h-green" onClick={()=>history.push("/mini_cabs")}>MINI CABS</a>
                             </div>: null}
 
                         </div>
                         <div class="h-green">
-                            <a href="/airports">AIRPORTS</a>
+                            <a onClick={()=>history.push("/airports")}>AIRPORTS</a>
                         </div>
                         <div class="h-green">
-                            <a href="/train_stations">TRAIN STATIONS</a>
+                            <a onClick={()=>history.push("/train_stations")}>TRAIN STATIONS</a>
                         </div>
                         <div class="h-green">
-                            <a href="/contact">CONTACT</a>
+                            <a onClick={()=>history.push("/contact")}>CONTACT</a>
                         </div>
                     </div>
                 </div>
@@ -57,28 +59,28 @@ function Header({page}) {
                 {showNav ? 
                     <nav className={"fixed w-full h-screen left-0 top-0 bg-white flex flex-col justify-between px-6 py-12 items-center slide-down z-10"}>
                         <div class="h-green">
-                            <a href="/about">ABOUT</a>
+                            <a onClick={()=>history.push("/about")}>ABOUT</a>
                         </div>
                         <div class="h-green">
-                            <a href="/services">SERVICES</a>
+                            <a onClick={()=>history.push("/services")}>SERVICES</a>
                         </div>
                         <div class="h-green">
-                            <a href="/cars">CARS</a>
+                            <a onClick={()=>history.push("/cars")}>CARS</a>
                         </div>
                         <div class="h-green">
-                            <a href="/cabs">CABS</a>
+                            <a onClick={()=>history.push("/cabs")}>CABS</a>
                         </div>
                         <div class="h-green">
-                            <a href="/mini_cabs">MINI CABS</a>
+                            <a onClick={()=>history.push("/mini_cabs")}>MINI CABS</a>
                         </div>
                         <div class="h-green">
-                            <a href="/airports">AIRPORTS</a>
+                            <a onClick={()=>history.push("/airports")}>AIRPORTS</a>
                         </div>
                         <div class="h-green">
-                            <a href="/train_stations">TRAIN STATIONS</a>
+                            <a onClick={()=>history.push("/train_stations")}>TRAIN STATIONS</a>
                         </div>
                         <div class="h-green">
-                            <a href="/contact">CONTACT</a>
+                            <a onClick={()=>history.push("/contact")}>CONTACT</a>
                         </div>
                         <Topbar mobileView={true} />
                     </nav> : null 

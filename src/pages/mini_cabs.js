@@ -12,6 +12,9 @@ function Mini_cabs() {
         <>
     
         <Header />
+
+        <Book />
+
      
           <section>
             <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">MINI CABS</h1>
@@ -50,8 +53,7 @@ function Mini_cabs() {
                     <img src="images/pexels-jhovani-morales-12319839.jpg" alt="aboutHomeImg" />
                 </div>
             </div>
-    
-            <Book />
+
             
         </section>
     

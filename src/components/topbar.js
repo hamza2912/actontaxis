@@ -19,7 +19,7 @@ function Topbar( { mobileView } ) {
         </div>
         <div class="mb-4 lg:mb-0 flex flex-row items-center lg:justify-center">
             <p class="text-gray-700 mr-2"><i class="fa-solid fa-mobile-screen"></i></p>
-            <a class="text-xs h-green" href="">02038134169</a>
+            <a class="text-xs h-green" href="">000 0000 0000</a>
         </div>
       </div> 
 
@@ -41,7 +41,7 @@ function Topbar( { mobileView } ) {
         </div>
         <div class="mb-4 lg:mb-0 flex flex-row items-center lg:justify-center">
             <p class="text-gray-700 mr-2"><i class="fa-solid fa-mobile-screen"></i></p>
-            <a class="text-xs h-green" href="">02038134169</a>
+            <a class="text-xs h-green" href="">000 0000 0000</a>
         </div>
       </div> 
 

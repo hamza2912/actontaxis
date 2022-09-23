@@ -12,6 +12,10 @@ function Cars() {
         <>
     
         <Header />
+
+        <Book />
+
+        
      
           <section>
             <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">CARS</h1>
@@ -51,7 +55,6 @@ function Cars() {
                 </div>
             </div>
     
-            <Book />
             
         </section>
     

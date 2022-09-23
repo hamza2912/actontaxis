@@ -12,6 +12,9 @@ function Bridge() {
         <>
     
         <Header />
+
+        <Book />
+
      
           <section>
             <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">ACTON TO LONDON BRIDGE</h1>
@@ -28,7 +31,6 @@ function Bridge() {
                 </div>
             </div>
     
-            <Book />
             
         </section>
     

@@ -12,14 +12,17 @@ function Services() {
     <>
 
     <Header />
+
+    <Book />
+
  
     <section id="service" class="w-full h-auto py-12 lg:px-20 px-6">
             <div class="w-full h-auto text-center text-4xl font-bold">
-                <h4 data-aos="fade-up" data-aos-duration="800" class="">Our Services</h4>
+                <h4 class="">Our Services</h4>
             </div>
             <div class="w-full h-auto my-8">
                 <div class="w-full h-auto flex grid lg:grid-cols-3 grid-cols-1 gap-8 justify-between">
-                    <div data-aos="zoom-in" data-aos-delay='50' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
+                    <div  class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
                         <div class="w-25 h-auto text-4xl mr-3">
                             <p><i class="fa-solid fa-taxi"></i></p>
                         </div>
@@ -29,7 +32,7 @@ function Services() {
                         </div>
                     </div>
                     <div
-                        data-aos="zoom-in" data-aos-delay='100' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
+                         class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
                         <div class="w-25 h-auto text-4xl mr-3">
                             <p><i class="fa-solid fa-coins"></i></p>
                         </div>
@@ -39,7 +42,7 @@ function Services() {
                         </div>
                     </div>
                     <div
-                        data-aos="zoom-in" data-aos-delay='150' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
+                         class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
                         <div class="w-25 h-auto text-4xl mr-3">
                             <p><i class="fa-brands fa-hire-a-helper"></i></p>
                         </div>
@@ -49,7 +52,7 @@ function Services() {
                         </div>
                     </div>
                     <div
-                        data-aos="zoom-in" data-aos-delay='200' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
+                         class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
                         <div class="w-25 h-auto text-4xl mr-3">
                             <p><i class="fa-solid fa-calculator"></i></p>
                         </div>
@@ -59,7 +62,7 @@ function Services() {
                         </div>
                     </div>
                     <div
-                        data-aos="zoom-in" data-aos-delay='250' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
+                         class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
                         <div class="w-25 h-auto text-4xl mr-3">
                             <p><i class="fa-solid fa-car-side"></i></p>
                         </div>
@@ -69,7 +72,7 @@ function Services() {
                         </div>
                     </div>
                     <div
-                        data-aos="zoom-in" data-aos-delay='300' data-aos-duration="800" class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
+                         class="flex flex-row border border-gray-300 p-6 text-gray-700 hover:text-white h-bg-green">
                         <div class="w-25 h-auto text-4xl mr-3">
                             <p><i class="fa-solid fa-medal"></i></p>
                         </div>
@@ -84,7 +87,6 @@ function Services() {
            
         </section>
 
-        <Book />
 
     <Footer />
 

@@ -2,12 +2,14 @@ import React from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Airport_widget from '../components/airport_widget';
-import Car_slider from '../components/car_slider'
+import Car_slider from '../components/car_slider';
+import { useHistory } from 'react-router-dom';
 
 
 function Home() {
 
-  
+    let history = useHistory();
+
 
   return (
       
@@ -221,7 +223,7 @@ function Home() {
 
         <div class="w-full h-auto flex lg:flex-row flex-col-reverse">
             <div class="lg:w-1/2 w-full h-auto flex">
-                <img src="images/pexels-gela-3569868.jpg" alt="contentImg4" />
+                <img src="images/christian-lendl-wPDkSY7v_t8-unsplash.jpg" alt="contentImg4" />
             </div>
             <div class="lg:w-1/2 w-full h-auto lg:p-16 p-6">
                 <div class="w-full h-auto text-3xl font-bold">
@@ -289,7 +291,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="/waterloo">Waterloo</a></h2>
+                                    <h2><a onClick={()=>history.push("/waterloo")}>Waterloo</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Use our taxi to get to Waterloo Station.</p>
                             </div>
@@ -302,7 +304,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="/kingcross">The King's Cross</a></h2>
+                                    <h2><a onClick={()=>history.push("/kingcross")}>The King's Cross</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Choose us to make your King's Cross station transfer as easy as possible.</p>
                             </div>
@@ -315,7 +317,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="/bridge">London Bridge</a></h2>
+                                    <h2><a onClick={()=>history.push("/bridge")}>London Bridge</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Our cabs can take you to London Bridge station for a reasonable price.</p>
                             </div>
@@ -328,7 +330,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="/euston">Euston</a></h2>
+                                    <h2><a onClick={()=>history.push("/euston")}>Euston</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Contact us at whatever time of day or night for your Euston transfer.</p>
                             </div>
@@ -341,7 +343,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg font-bold h-underline">
-                                    <h2><a href="/paddington">Paddington</a></h2>
+                                    <h2><a onClick={()=>history.push("/paddington")}>Paddington</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Make one call to book your taxi for the Paddington station transfer.</p>
                             </div>
@@ -354,7 +356,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="/charingcross">The Charing Cross</a></h2>
+                                    <h2><a onClick={()=>history.push("/charingcross")}>The Charing Cross</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">We make your journey to Charing Cross as pleasant and convenient as possible.</p>
                             </div>
@@ -367,7 +369,7 @@ function Home() {
                             </div>
                             <div class="w-full h-auto ml-6">
                                 <div class="w-full text-lg h-underline font-bold">
-                                    <h2><a href="/victoria">Victoria</a></h2>
+                                    <h2><a onClick={()=>history.push("/victoria")}>Victoria</a></h2>
                                 </div>
                                 <p class="mt-2 text-gray-600">Make your tedious travel from Acton to Victoria enjoyable.
 </p>

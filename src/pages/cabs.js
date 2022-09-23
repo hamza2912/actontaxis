@@ -12,6 +12,9 @@ function Cabs() {
         <>
     
         <Header />
+
+        <Book />
+
      
           <section>
             <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">CABS</h1>
@@ -46,7 +49,6 @@ function Cabs() {
                 </div>
             </div>
     
-            <Book />
             
         </section>
     

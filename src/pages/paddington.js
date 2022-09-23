@@ -12,6 +12,9 @@ function Paddington() {
         <>
     
         <Header />
+
+            
+        <Book />
      
           <section>
             <h1 className="text-black text-3xl text-center font-bold lg:pt-16 pt-10">ACTON TO PADDINGTON</h1>
@@ -31,7 +34,6 @@ function Paddington() {
                 </div>
             </div>
     
-            <Book />
             
         </section>
     
