@@ -314,6 +314,13 @@ textarea {
   border-color: #fbbf24;
 }
 
+.quote{
+  color: #FFF;
+  background-color: #fbbf24;
+  padding: 10px;
+  /* border-color: #fbbf24; */
+}
+
 .fade-in{
   animation: FadeIn 0.2s linear;
 }

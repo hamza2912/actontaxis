@@ -3,6 +3,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import Airport_widget from '../components/airport_widget';
 import Car_slider from '../components/car_slider';
+import Book from '../components/book';
 import { useHistory } from 'react-router-dom';
 
 
@@ -40,37 +41,8 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 w-full h-auto flex flex-col justify-center mt-8 lg:mt-0">
-                <div class="w-full h-auto flex justify-center">
-                    <div class="lg:w-1/2 w-4/5 h-auto bg-blue text-center px-4 py-6 rounded-lg">
-                        <h1 class="text-3xl text-white font-semibold">Book Your Journey</h1>
-                        <form action="">
-                            <div class="w-full h-auto mt-6">
-                                <ul>
-                                    <li class="w-full h-auto">
-                                        <label for="source">Name:</label>
-                                        <input placeholder="Start Address" type="text" id="source" name="from"
-                                            class="form-control ui-autocomplete-input w-full h-auto rounded p-2 focus:outline-none"
-                                            required autocomplete="off" />
-                                    </li>
-                                    <li>
-                                        <label for="dest">Name:</label>
-                                        <input placeholder="End Address" type="text" id="dest" name="to"
-                                            class="form-control ui-autocomplete-input w-full h-auto rounded p-2 mt-4 focus:outline-none"
-                                            required="" autocomplete="off" />
-                                    </li>
-                                    <li>
-                                        <input type="hidden" name="office_name" value="TNW" />
-                                        <input type="hidden" name="office_details" value=""/>
-                                        <button name="button" type="submit" id="submit"
-                                            class="btn btn-primary w-full h-auto rounded bg-blue-400 text-white p-2 mt-4 hover:bg-blue-500 focus:outline-none text-lg font-semibold">GET
-                                            QUOTE</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="lg:w-1/2 w-full h-auto flex flex-col justify-center mt-8">
+                <Book type='home' />
             </div>
         </section>
 
