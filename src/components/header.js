@@ -17,10 +17,10 @@ function Header({page}) {
         <div className={page == "home" ? "w-full h-auto bg-transparent absolute lg:p-16 p-6" : "w-full h-auto bg-gray-700 relative lg:px-16 lg:pt-16 lg:pb-12 p-6"}>
             <div class="w-full h-auto flex flex-row items-center">
                 <div class="w-2/5 flex justify-start">
-                    <div class="">
+                    <div class="lg:w-24 w-16">
                         <a href="/">
-                            {/* <img src="images/logo/logo.png" alt="Logo" /> */}
-                           <h1 className="text-2xl text-white font-semibold">Actontaxiscabs</h1> 
+                            <img className='w-full' src="images/logo/logo.png" alt="Logo" />
+                           {/* <h1 className="text-2xl text-white font-semibold">Actontaxiscabs</h1>  */}
                         </a>
                     </div>
                 </div>
