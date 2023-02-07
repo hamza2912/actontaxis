@@ -16,11 +16,11 @@ function Footer() {
                     <p class="mt-3 text-gray-600 w-4/5">Acton Taxi is a credible name when it comes to providing online taxis in
                         Acton. For any kind of travelling, you can book a taxi at a cheap fare.</p>
                     <p class="mt-4 text-gray-600"><i class="fa-solid fa-location-dot mr-2"></i>
-                        Acton Green, Acton, London W5 5QT, United Kingdom</p>
+                        N Acton Road, London NW10 6PH</p>
                     <p class="mt-4 text-gray-600"><i class="fa-solid fa-envelope mr-2"></i>
-                        info(@)Actontaxis.co.uk</p>
+                        info@actontaxiscabs.co.uk</p>
                     <p class="mt-4 text-gray-600"><i class="fa-solid fa-phone mr-2"></i>
-                        000 0000 0000</p>
+                        02037403527</p>
                 </div>
                 <div class="w-1/2 h-auto flex grid-cols-2 lg:gap-8 gap-12 mt-10 lg:mt-0">
                     <div class="w-full h-auto flex flex-col">
