@@ -9,10 +9,69 @@ html, body{
   scroll-behavior: smooth;
 }
 
+#MoreItemModal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  margin: auto;
+  background-color: whie;
+  background-color: white;
+  height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
+#itemcount{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  background-color: whie;
+  background-color: white;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.close-luggage{
+  background-color: #fbbf24;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.card-header{
+  background-color: rgb(211, 211, 212);
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+}
+
 a{
   cursor: pointer;
 }
 
+#ui-id-1{
+  background-color: white;
+  width: 100px;
+}
+
+#ui-id-2{
+  background-color: white;
+  width: 100px;
+}
+
+.ui-menu-item{
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+}
 
 .green {
   /* color: #85c226; */
@@ -358,6 +417,12 @@ textarea {
   .boxContent {
     width: 90px;
     height: 90px;
+  }
+  #MoreItemModal{
+    width: 300px;
+  }
+  #itemcount{
+    width: 300px;
   }
 }
 

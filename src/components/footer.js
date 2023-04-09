@@ -40,8 +40,8 @@ function Footer() {
             </div>
             <div class="w-full h-auto bg-gray-700 flex lg:flex-row flex-col lg:px-24 px-12 py-8"> {/*bg-green*/}
                 <div class="lg:w-1/2 w-full h-auto text-lg text-white">
-                    <p>Copyright © 2021 Acton Cabs | All Rights Reserved.</p>
-                    <p className="text-sm text-gray-400 mt-4">Built by Silicon Codes Ltd (Reg in England)</p>
+                    <p>Copyright © 2023 Acton Cabs | All Rights Reserved.</p>
+                    {/* <p className="text-sm text-gray-400 mt-4">Built by Silicon Codes Ltd (Reg in England)</p> */}
                     <a className="text-sm text-gray-400 mt-0 pt-0" href="https://www.siliconcodes.com" rel="noreferrer" target="_blank">www.siliconcodes.com</a>
                 </div>
                 <div class="lg:w-1/2 w-full h-auto text-white text-xl flex justify-center items-center mt-4 lg:mt-0">

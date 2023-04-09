@@ -49,6 +49,7 @@ function ADDVIA() {
 
 }
 
+
 var arr = new Array(6);
 var valuesArray = [];
 function dlt_via(x) {
@@ -74,20 +75,23 @@ function dlt_via(x) {
 
 }
 
-document.getElementById("updateVia").onclick = function () {
-    valuesArray.length = 0;
 
-    for (var a = 0; a <= (count - 1); a++) {
-        var viaValue = document.getElementById("Via" + a).value;
-        if (viaValue != "") {
-            valuesArray.push(viaValue);
-        }
-    }
+// document.getElementById("updateVia").onclick = function () {
+//     valuesArray.length = 0;
 
-    document.getElementById("via").value = valuesArray.length + " Vias";
-}
+//     for (var a = 0; a <= (count - 1); a++) {
+//         var viaValue = document.getElementById("Via" + a).value;
+//         if (viaValue != "") {
+//             valuesArray.push(viaValue);
+//         }
+//     }
+
+//     document.getElementById("via").value = valuesArray.length + " Vias";
+// }
+
 
 get_date_time_in_inputs();
+
 
 function get_date_time_in_inputs() {
     var today = new Date();
@@ -191,6 +195,7 @@ function savewaitnreturn() {
 var accuserdb = "";
 
 function addvalue(e) {
+    console.log('here')
     var mytext = $(e).text()
     $('#number').val("");
     $('#nameid').val(mytext);
@@ -237,9 +242,9 @@ function addvalue(e) {
                     // $('#' + myidd).html(new_item + " (" + increase.trim() + ")" + `<a><i onclick="removeitem(this)" class="remove glyphicon glyphicon-remove-sign glyphicon-white"></i></a>`);
 
                     $('#' + myidd).html(`<input class="form-control custom-inputs holddatainput" value="${new_item} (${increase.trim()})"  disabled>` + 
-                        `<div class="input-group-append">
-                            <button type="button" class="btn input-grp-btns" onclick="removeitem(this)">
-                                <img class="form-icons" src="contents/images/dlt-icon.webp" alt="luggage delete" width="20">
+                        `<div class="input-group-append relative">
+                            <button type="button" class="btn input-grp-btns del-luggage-itm absolute right-4 -top-8" onclick="removeitem(this)">
+                                <i class='fa-solid fa-trash'></i>   
                             </button>
                         </div>`);
                 }
@@ -286,9 +291,9 @@ function insertitem(text, val) {
 
         tag = `<div id="id_${myid}" class="input-group mb-2 col-lg-4 col-md-6 col-sm-12 col-12">
                     <input class="form-control custom-inputs holddatainput" value="${val} (${text})"  disabled>
-                    <div class="input-group-append">
-                        <button type="button" class="btn input-grp-btns" onclick="removeitem(this)">
-                            <img class="form-icons" src="contents/images/dlt-icon.webp" alt="luggage delete" width="20">
+                    <div class="input-group-append relative">
+                        <button type="button" class="btn input-grp-btns del-luggage-itm absolute right-4 -top-8" onclick="removeitem(this)">
+                        <i class='fa-solid fa-trash'></i> 
                         </button>
                     </div>
                 </div>`;
@@ -327,8 +332,30 @@ function addHoursToDate(date, hours) {
 
 var listvias = [];
 var inputsvalues, arrcheckincabin, Array_Luggage_text;
+
 $(document).ready(function () {
+
+    $('.luggage-items-btn').click(function () {
+        console.log('here ia ama');
+        addvalue(this);
+    });
+    
+    $('.addluggage').click(function () {
+        additem($('#nameid').val(),$('#numbermoreitm').val());
+    });
+
+    $('.wait-and-return-btn').click(function () {
+        savewaitnreturn();
+    });
+
+    $('.del-luggage-itm').click(function () {
+        removeitem(this);
+    });
+
+    
+    
     $("#get-quotes").click(function () {
+
         var date = $('#book_pick_date').val();
         var time = $('#book_pick_time').val();
         var d = date + " " + time;

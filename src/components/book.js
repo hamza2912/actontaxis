@@ -64,35 +64,240 @@ function Book({type}) {
                             </div>
 
                             <div class="col-lg-3 col-md-5 col-sm-12 col-12 mx-auto order-12">
-                                <button id="get-quotes" type="button" class="btn custom-btn-1 custom-btns col-sm-12 col-12 w-1/2 mt-2 font-semibold quote rounded-full" title="Click to get quotes">Get Quotes</button>
+                                <button id="get-quotes" type="button" class="btn custom-btn-1 custom-btns col-sm-12 col-12 w-1/2 mt-2 font-semibold quote rounded-full" title="Click to get quotes">Book Now</button>
                             </div>
                         </div>
                     </form>
-                    {/* <form action="">
-                        <div class="w-full h-auto mt-6">
-                            <ul>
-                                <li class="w-full h-auto">
-                                    <label for="source">Name:</label>
-                                    <input placeholder="Start Address" type="text" id="source" name="from"
-                                        class="form-control ui-autocomplete-input w-full h-auto rounded p-2 focus:outline-none"
-                                        required autocomplete="off" />
-                                </li>
-                                <li>
-                                    <label for="dest">Name:</label>
-                                    <input placeholder="End Address" type="text" id="dest" name="to"
-                                        class="form-control ui-autocomplete-input w-full h-auto rounded p-2 mt-4 focus:outline-none"
-                                        required="" autocomplete="off" />
-                                </li>
-                                <li>
-                                    <input type="hidden" name="office_name" value="TNW" />
-                                    <input type="hidden" name="office_details" value=""/>
-                                    <button name="button" type="submit" id="submit"
-                                        class="btn btn-primary w-full h-auto rounded bg-blue-400 text-white p-2 mt-4 hover:bg-blue-500 focus:outline-none text-lg font-semibold">GET
-                                        QUOTE</button>
-                                </li>
-                            </ul>
+                    {/* Via Modal */}
+                    <div class="modal fade hidden" id="exampleModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title">Add Vias</h2>
+                                    
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ui-front text-center">
+                                    <table class="table custom-tables">
+                                        <tbody id="via-list"></tbody>
+                                    </table>
+                                    <button id="add-via" type="button" class="btn custom-btn-1 font-bold" >Add another via</button>
+                                </div>
+                                <div class="modal-footer py-1">
+                                    <button id="updateVia" type="button" class="btn custom-btn-1 font-bold" data-dismiss="modal" aria-label="close">Save</button>
+                                </div>
+                            </div>
                         </div>
-                    </form> */}
+                    </div>
+                    {/* Via Modal End */}
+
+                     {/* wait and return modal  */}
+                    <div class="modal fade hidden" id="timeModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-4 col-6 mb-md-0 mb-3">
+                                            <label class="wait-label" for="minwaittime">Waiting Time: </label>
+                                        </div>
+
+                                        <div class="col-md-5 col-6 mb-md-0 mb-3">
+                                            <div class="input-group mb-0">
+                                                <input id="minwaittime" class="form-control custom-inputs" type="number"  min="1" max="60" value="1" />
+                                                
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <label> minutes</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-5">
+                                            <button class="btn custom-btn-1 w-100 h-100 py-2 wait-and-return-btn" onclick="savewaitnreturn()" >Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     {/* wait and return modal end  */}
+
+                     {/* Luggage modal */}
+                    <div class="modal fade hidden" id="MoreItemModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                            <div class="modal-content">
+                                {/* <div class="modal-header d-block text-center">
+                                    <h2 class="modal-title">Select More Items</h2>
+                                </div> */}
+
+                                <div class="modal-body">
+                                    <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingOne">
+                                                <h3 class="luggage-headings">
+                                                    <button disabled class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                        Luggage
+                                                    </button>
+                                                </h3>
+                                            </div>
+                                            <div id="collapseOne" class="collapse" data-parent="#accordionExample" aria-labelledby="headingOne">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Hand Luggage</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Suitcase</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Backpack</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingTwo">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Boxes
+                                                    </button>
+                                                </h3>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" data-parent="#accordionExample" aria-labelledby="headingTwo">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Small Small box (14 x 12 x 15 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Medium box (16 x 16 x 16 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Large box (20 x 20 x 20 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">XL box (24 x 24 x 33 inches)</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingThree">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        Child Items
+                                                    </button>
+                                                </h3>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" data-parent="#accordionExample" aria-labelledby="headingThree">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Child's pram</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Child's foldable pushchair</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingFour">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                                        Outdoor items
+                                                    </button>
+                                                </h3>
+                                            </div>
+
+                                            <div id="collapseFour" class="collapse" data-parent="#accordionExample" aria-labelledby="headingFour">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Tent</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Large Rucksack</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Ironing board</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Pair of skis</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Snowboard</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Bike</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Bike box</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Golf bag</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingFive">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        Pets
+                                                    </button>
+                                                </h3>
+                                            </div>
+
+                                            <div id="collapseFive" class="collapse" data-parent="#accordionExample" aria-labelledby="headingFive">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Small pet (in cage)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Large dog</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingSix">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        Household items
+                                                    </button>
+                                                </h3>
+                                            </div>
+
+                                            <div id="collapseSix" class="collapse" data-parent="#accordionExample" aria-labelledby="headingSix">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">TV (less than 30 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">TV (30 to 60 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Ironing board</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Music speaker (Large)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Mirror (upto 60x36 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Rug (upto 24x84 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Single Mattress</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Bedside table (45x55cm)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Microwave oven</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Vacuum cleaner</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">TV stand</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Large musical instrument case (upto 60x24 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Closet</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer py-1">
+                                    <button type="button" class="btn custom-btn-1 close-luggage" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade hidden" id="itemcount" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header d-block text-center">
+                                    <h2 class="modal-title">Enter Quantity</h2>
+                                </div>
+
+                                <div class="modal-body">
+                                    <label for="numbermoreitm hidden">Luggage</label>
+                                    <input type="hidden" id="nameid" value="" />
+                                    <input type="number" max="99" min="1" placeholder="1" class="form-control custom-inputs" id="numbermoreitm" />
+
+                                </div>
+                                <div class="modal-footer py-1">
+                                    <button type="button" class="btn custom-btn-1 close-luggage addluggage" onclick="additem($('#nameid').val(),$('#numbermoreitm').val())" data-dismiss="modal">Save</button>
+                                    <button type="button" class="btn custom-btn-1 close-luggage ml-auto" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     {/* luggage modal end  */}
+
+                    {/* loader  */}
+                    <div class="loading-div hidden">
+                        <div class="inner-loading-div">
+                            <h2 class="loading-heading">Please Wait...</h2>
+
+                            <div class="loading-imgs-div mx-auto">
+                                <img class="img-fluid steer" src="contents/images/steering.webp" alt="steering" width="200" />
+                            </div>
+                        </div>
+                    </div>
+                    {/* Loader end --> */}
+                    
                 </div>
             </div>
       
@@ -107,31 +312,7 @@ function Book({type}) {
                 <h2>Book Your Journey</h2>
             </div>
                 <div class="w-full h-auto">
-                    {/* <form action="">
-                        <div class="w-full h-auto lg:pr-8 mt-6">
-                            <ul class="flex lg:flex-row flex-col justify-between items-center">
-                                <li class="w-full h-auto">
-                                    <label for="source">Name:</label>
-                                    <input placeholder="Start Address" type="text" id="source" name="from"
-                                        class="form-control ui-autocomplete-input w-full h-auto rounded p-2 mr-4 focus:outline-none mt-2 lg:mt-0"
-                                        required autocomplete="off" />
-                                </li>
-                                <li class="w-full h-auto">
-                                    <label for="dest">Name:</label>
-                                    <input placeholder="End Address" type="text" id="dest" name="to"
-                                        class="form-control ui-autocomplete-input w-full h-auto rounded p-2 lg:mx-4 focus:outline-none mt-2 lg:mt-0"
-                                        required="" autocomplete="off" />
-                                </li>
-                                <li class="w-full h-auto">
-                                    <input type="hidden" name="office_name" value="TNW" />
-                                    <input type="hidden" name="office_details" value="" />
-                                    <button name="button" type="submit" id="submit"
-                                        class="w-full h-auto rounded lg:ml-8 bg-blue-400 text-white p-2 hover:bg-blue-700 focus:outline-none mt-2 lg:mt-0 text-lg font-semibold">GET
-                                        QUOTE</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </form> */}
+                    
                     <form class="container">
                         <div class="form-row justify-content-center mt-4 grid lg:grid-cols-3 grid-cols-2 gap-2">
                             <div class="input-group mb-2 col-lg-4 col-md-6 col-sm-12 col-12 order-1 order-lg-1 order-md-1">
@@ -188,9 +369,242 @@ function Book({type}) {
                             </div>
                         </div>
                         <div class="lg:w-1/4 w-4/5 mx-auto">
-                            <button id="get-quotes" type="button" class="btn custom-btn-1 custom-btns col-sm-12 col-12 w-full mt-2 font-semibold quote rounded-full" title="Click to get quotes">Get Quotes</button>
+                            <button id="get-quotes" type="button" class="btn custom-btn-1 custom-btns col-sm-12 col-12 w-full mt-2 font-semibold quote rounded-full" title="Click to get quotes">Book Now</button>
                         </div>
                     </form>
+
+                    {/* Via Modal */}
+                    <div class="modal fade hidden" id="exampleModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title">Add Vias</h2>
+                                    
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body ui-front text-center">
+                                    <table class="table custom-tables">
+                                        <tbody id="via-list"></tbody>
+                                    </table>
+                                    <button id="add-via" type="button" class="btn custom-btn-1 font-bold" >Add another via</button>
+                                </div>
+                                <div class="modal-footer py-1">
+                                    <button id="updateVia" type="button" class="btn custom-btn-1 font-bold" data-dismiss="modal" aria-label="close">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Via Modal End */}
+
+                     {/* wait and return modal  */}
+                    <div class="modal fade hidden" id="timeModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-4 col-6 mb-md-0 mb-3">
+                                            <label class="wait-label" for="minwaittime">Waiting Time: </label>
+                                        </div>
+
+                                        <div class="col-md-5 col-6 mb-md-0 mb-3">
+                                            <div class="input-group mb-0">
+                                                <input id="minwaittime" class="form-control custom-inputs" type="number"  min="1" max="60" value="1" />
+                                                
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <label> minutes</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-5">
+                                            <button class="btn custom-btn-1 w-100 h-100 py-2 wait-and-return-btn" onclick="savewaitnreturn()" >Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     {/* wait and return modal end  */}
+
+                     {/* Luggage modal */}
+                    <div class="modal fade hidden" id="MoreItemModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                            <div class="modal-content">
+                                {/* <div class="modal-header d-block text-center">
+                                    <h2 class="modal-title">Select More Items</h2>
+                                </div> */}
+
+                                <div class="modal-body">
+                                    <div class="accordion" id="accordionExample" role="tablist" aria-multiselectable="true">
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingOne">
+                                                <h3 class="luggage-headings">
+                                                    <button disabled class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                        Luggage
+                                                    </button>
+                                                </h3>
+                                            </div>
+                                            <div id="collapseOne" class="collapse" data-parent="#accordionExample" aria-labelledby="headingOne">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Hand Luggage</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Suitcase</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Backpack</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingTwo">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Boxes
+                                                    </button>
+                                                </h3>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" data-parent="#accordionExample" aria-labelledby="headingTwo">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Small Small box (14 x 12 x 15 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Medium box (16 x 16 x 16 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Large box (20 x 20 x 20 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">XL box (24 x 24 x 33 inches)</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingThree">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        Child Items
+                                                    </button>
+                                                </h3>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" data-parent="#accordionExample" aria-labelledby="headingThree">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Child's pram</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Child's foldable pushchair</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingFour">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                                        Outdoor items
+                                                    </button>
+                                                </h3>
+                                            </div>
+
+                                            <div id="collapseFour" class="collapse" data-parent="#accordionExample" aria-labelledby="headingFour">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Tent</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Large Rucksack</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Ironing board</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Pair of skis</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Snowboard</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Bike</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Bike box</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Golf bag</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingFive">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        Pets
+                                                    </button>
+                                                </h3>
+                                            </div>
+
+                                            <div id="collapseFive" class="collapse" data-parent="#accordionExample" aria-labelledby="headingFive">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Small pet (in cage)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Large dog</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingSix">
+                                                <h3 class="luggage-headings">
+                                                    <button class="btn collapsed luggage-btns" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        Household items
+                                                    </button>
+                                                </h3>
+                                            </div>
+
+                                            <div id="collapseSix" class="collapse" data-parent="#accordionExample" aria-labelledby="headingSix">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">TV (less than 30 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">TV (30 to 60 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Ironing board</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Music speaker (Large)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Mirror (upto 60x36 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Rug (upto 24x84 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Single Mattress</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Bedside table (45x55cm)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Microwave oven</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Vacuum cleaner</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">TV stand</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Large musical instrument case (upto 60x24 inches)</button>
+                                                    <button type="button" class="btn luggage-items-btn" onclick="addvalue(this)">Closet</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer py-1">
+                                    <button type="button" class="btn custom-btn-1 close-luggage" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade hidden" id="itemcount" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header d-block text-center">
+                                    <h2 class="modal-title">Enter Quantity</h2>
+                                </div>
+
+                                <div class="modal-body">
+                                    <label for="numbermoreitm hidden">Luggage</label>
+                                    <input type="hidden" id="nameid" value="" />
+                                    <input type="number" max="99" min="1" placeholder="1" class="form-control custom-inputs" id="numbermoreitm" />
+
+                                </div>
+                                <div class="modal-footer py-1">
+                                    <button type="button" class="btn custom-btn-1 close-luggage addluggage" onclick="additem($('#nameid').val(),$('#numbermoreitm').val())" data-dismiss="modal">Save</button>
+                                    <button type="button" class="btn custom-btn-1 close-luggage ml-auto" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     {/* luggage modal end  */}
+
+                    {/* loader  */}
+                    <div class="loading-div hidden">
+                        <div class="inner-loading-div">
+                            <h2 class="loading-heading">Please Wait...</h2>
+
+                            <div class="loading-imgs-div mx-auto">
+                                <img class="img-fluid steer" src="contents/images/steering.webp" alt="steering" width="200" />
+                            </div>
+                        </div>
+                    </div>
+                    {/* Loader end --> */}
+
+                    
+
                 </div>
         </div>
         );    
@@ -199,3 +613,57 @@ function Book({type}) {
 
 
 export default Book;
+
+{/* <form action="">
+                        <div class="w-full h-auto lg:pr-8 mt-6">
+                            <ul class="flex lg:flex-row flex-col justify-between items-center">
+                                <li class="w-full h-auto">
+                                    <label for="source">Name:</label>
+                                    <input placeholder="Start Address" type="text" id="source" name="from"
+                                        class="form-control ui-autocomplete-input w-full h-auto rounded p-2 mr-4 focus:outline-none mt-2 lg:mt-0"
+                                        required autocomplete="off" />
+                                </li>
+                                <li class="w-full h-auto">
+                                    <label for="dest">Name:</label>
+                                    <input placeholder="End Address" type="text" id="dest" name="to"
+                                        class="form-control ui-autocomplete-input w-full h-auto rounded p-2 lg:mx-4 focus:outline-none mt-2 lg:mt-0"
+                                        required="" autocomplete="off" />
+                                </li>
+                                <li class="w-full h-auto">
+                                    <input type="hidden" name="office_name" value="TNW" />
+                                    <input type="hidden" name="office_details" value="" />
+                                    <button name="button" type="submit" id="submit"
+                                        class="w-full h-auto rounded lg:ml-8 bg-blue-400 text-white p-2 hover:bg-blue-700 focus:outline-none mt-2 lg:mt-0 text-lg font-semibold">GET
+                                        QUOTE</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </form> */}
+
+
+
+{/* <form action="">
+                        <div class="w-full h-auto mt-6">
+                            <ul>
+                                <li class="w-full h-auto">
+                                    <label for="source">Name:</label>
+                                    <input placeholder="Start Address" type="text" id="source" name="from"
+                                        class="form-control ui-autocomplete-input w-full h-auto rounded p-2 focus:outline-none"
+                                        required autocomplete="off" />
+                                </li>
+                                <li>
+                                    <label for="dest">Name:</label>
+                                    <input placeholder="End Address" type="text" id="dest" name="to"
+                                        class="form-control ui-autocomplete-input w-full h-auto rounded p-2 mt-4 focus:outline-none"
+                                        required="" autocomplete="off" />
+                                </li>
+                                <li>
+                                    <input type="hidden" name="office_name" value="TNW" />
+                                    <input type="hidden" name="office_details" value=""/>
+                                    <button name="button" type="submit" id="submit"
+                                        class="btn btn-primary w-full h-auto rounded bg-blue-400 text-white p-2 mt-4 hover:bg-blue-500 focus:outline-none text-lg font-semibold">GET
+                                        QUOTE</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </form> */}
